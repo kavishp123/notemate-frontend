@@ -1,0 +1,41 @@
+<!-- user-registration.component.html -->
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name" />
+    </div>
+  
+    <div>
+      <label for="age">Age:</label>
+      <input type="number" id="age" formControlName="age" />
+    </div>
+  
+    <div>
+      <label for="gender">Gender:</label>
+      <input type="text" id="gender" formControlName="gender" />
+    </div>
+  
+    <div>
+      <label for="mobile">Mobile:</label>
+      <input type="text" id="mobile" formControlName="mobile" />
+    </div>
+  
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email" />
+    </div>
+  
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" formControlName="password" />
+    </div>
+  
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" formControlName="username" />
+    </div>
+  
+    <button type="submit" [disabled]="userForm.invalid">Submit</button>
+  </form>
+  

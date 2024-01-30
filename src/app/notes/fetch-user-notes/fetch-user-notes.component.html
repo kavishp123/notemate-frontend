@@ -1,0 +1,19 @@
+<div *ngIf="notes.length > 0">
+    <div class="card-deck">
+      <div class="card" *ngFor="let note of notes">
+        <div class="card-body">
+          <h5 class="card-title">{{ note.title }}</h5>
+          <p class="card-text">{{ note.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="notes.length === 0">
+    <p>No notes available.</p>
+  </div>
+
+  <div class="add-note">
+    <button routerLink="/add-note">Add Note</button>
+  </div>
+  
